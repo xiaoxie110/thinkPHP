@@ -17,8 +17,8 @@
  <body>
  <div class="main">
  <h2>ThinkPHP示例之：图片上传</h2>
-<?php if(!empty($data)): ?><img src="/thinkphp/Uploads/m_<?php echo ($data["image"]); ?>" /> <img src="/thinkphp/Uploads/s_<?php echo ($data["image"]); ?>" /><?php endif; ?>
-<form id="upload" method='post' action="/thinkphp/index.php/File/Index/upload/" enctype="multipart/form-data">
+<?php if(!empty($data)): ?><img src="/thinkPHP/Uploads/m_<?php echo ($data["image"]); ?>" /> <img src="/thinkPHP/Uploads/s_<?php echo ($data["image"]); ?>" /><?php endif; ?>
+<form id="upload" method='post' action="/thinkPHP/index.php/File/Index/upload/" enctype="multipart/form-data">
 <div class="result" >上传允许文件类型：gif png jpg 图像文件，并生成2张缩略图，其中大图带水印，生成后会删除原图。</div>
 <input name="image" id="image" type="file" />
 <input type="submit" value="提交" class="button" >

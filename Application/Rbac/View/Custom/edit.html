@@ -1,0 +1,55 @@
+<include file="Public:header" />
+<div id="main" class="main" >
+<div class="content">
+<div class="title">编辑分组 [ <a href="__CONTROLLER__">返回列表</a> ]</div>
+<form method='post' id="form1" >
+<table cellpadding=3 cellspacing=3>
+<tr>
+	<td class="tRight" >用户名：</td>
+	<td class="tLeft" ><input type="text" class="medium bLeftRequire"  check='^\S+$' warning="不能为空,且不能含有空格" name="user_name" value="{$vo.user_name}"></td>
+</tr>
+<tr>
+	<td class="tRight tTop">邮箱：</td>
+	<td class="tLeft"><input type="text" class="medium bLeftRequire"  name="user_email" value="{$vo.user_email}"></td>
+</tr>
+<tr>
+	<td class="tRight tTop">密码：</td>
+	<td class="tLeft"><input type="password" class="medium bLeftRequire"  name="password" value="{$vo.password}"></td>
+</tr>
+<tr>
+	<td class="tRight tTop">确认密码：</td>
+	<td class="tLeft"><input type="password" class="medium bLeftRequire"  name="passwordnew" value="{$vo.password}"></td>
+</tr>
+<tr>
+	<td class="tRight tTop">公司名称：</td>
+	<td class="tLeft"><input type="text" class="medium bLeftRequire"  name="passwordnew" value="{$vo.password}"></td>
+</tr>
+
+<tr>
+	<td class="tRight tTop">联系人：</td>
+	<td class="tLeft"><input type="text" class="medium bLeftRequire"  name="passwordnew" value="{$vo.password}"></td>
+</tr>
+
+<tr>
+	<td class="tRight tTop">联系电话：</td>
+	<td class="tLeft"><input type="text" class="medium bLeftRequire"  name="passwordnew" value="{$vo.password}"></td>
+</tr>
+
+<tr>
+	<td class="tRight tTop">备注：</td>
+	<td class="tLeft"><input type="text" class="medium bLeftRequire"  name="passwordnew" value="{$vo.password}"></td>
+</tr>
+
+
+<tr>
+	<td></td>
+	<td class="center"><input type="hidden" name="id" value="{$vo.id}">
+	<input type="hidden" name="ajax" value="1">
+	<div class="impBtn fLeft"><input type="button" value="保存" onclick="sendForm('form1','__CONTROLLER__/update/','tips')" class="save imgButton"></div>
+	<div class="impBtn fRig"><input type="reset" class="reset imgButton" value="清空" ></div>
+	</td>
+</tr>
+</table>
+</form>
+</div>
+</div>

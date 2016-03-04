@@ -49,7 +49,7 @@ class IndexController extends Controller {
             $uploadList = $upload->getUploadFileInfo();
             import('@.ORG.Image');
             //给m_缩略图添加水印, Image::water('原文件名','水印图片地址')
-            \Image::water($uploadList[0]['savepath'] . 'm_' . $uploadList[0]['savename'], APP_PATH.'Tpl/Public/Images/logo.png');
+            \Image::water($uploadList[0]['savepath'] . 'm_' . $uploadList[0]['savename'], APP_PATH.'File/View/Public/Images/logo.png');
             $_POST['image'] = $uploadList[0]['savename'];
         }
         $model  = M('Photo');
