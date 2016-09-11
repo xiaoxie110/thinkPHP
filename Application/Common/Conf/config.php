@@ -5,9 +5,9 @@ return array(
     'DB_HOST'   => 'localhost', // 服务器地址
     'DB_NAME'   => 'thinkphp', // 数据库名
     'DB_USER'   => 'root', // 用户名
-    'DB_PWD'    => '123456', // 密码
-    'DB_PORT'   => 3306, // 端口
-    'DB_PREFIX' => '', // 数据库表前缀     
+    'DB_PWD'    => 'xxk123', // 密码
+    'DB_PORT'   => '', // 端口
+    'DB_PREFIX' => 'think_', // 数据库表前缀     
     
     /* 模板相关配置 */
     'TMPL_PARSE_STRING' => array(
@@ -20,4 +20,10 @@ return array(
     
 
     'SHOW_PAGE_TRACE' =>true,
+    
+    //缓存
+    'DATA_CACHE_TYPE'  => 'Redis', 
+    'DATA_CACHE_PREFIX'=> '',
+    'DATA_CACHE_TIME'  => 60,
+
 );

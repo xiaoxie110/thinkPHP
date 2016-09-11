@@ -17,12 +17,21 @@
  <body>
  <div class="main">
  <h2>ThinkPHP示例之：图片上传</h2>
-<?php if(!empty($data)): ?><img src="/thinkPHP/Uploads/m_<?php echo ($data["image"]); ?>" /> <img src="/thinkPHP/Uploads/s_<?php echo ($data["image"]); ?>" /><?php endif; ?>
-<form id="upload" method='post' action="/thinkPHP/index.php/File/Index/upload/" enctype="multipart/form-data">
+<?php if(!empty($data)): ?><img src="/thinkphp/Uploads/m_<?php echo ($data["image"]); ?>" /> <img src="/thinkphp/Uploads/s_<?php echo ($data["image"]); ?>" /><?php endif; ?>
+<form id="upload" method='post' action="/thinkphp/index.php/File/Index/upload/" enctype="multipart/form-data">
 <div class="result" >上传允许文件类型：gif png jpg 图像文件，并生成2张缩略图，其中大图带水印，生成后会删除原图。</div>
 <input name="image" id="image" type="file" />
 <input type="submit" value="提交" class="button" >
 </form>
+<?php echo ($code); ?>
 </div>
+<table cellpadding=3 cellspacing=5>
+<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+<td style="border-bottom:1px solid silver;"><span style="color:gray">[ <?php echo (date('Y-m-d H:i:s',$vo["create_time"])); ?> ]</span> <?php echo ($vo["title"]); ?> </td>
+</tr><?php endforeach; endif; else: echo "" ;endif; ?>
+<tr>		
+</tr>
+</table>
+<div class="result page"><?php echo ($page); ?></div>
 </body>
 </html>

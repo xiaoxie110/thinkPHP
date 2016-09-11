@@ -23,6 +23,17 @@
 <input name="image" id="image" type="file" />
 <input type="submit" value="提交" class="button" >
 </form>
+{$code}
 </div>
+<table cellpadding=3 cellspacing=5>
+<volist name="list" id="vo">
+<tr>
+<td style="border-bottom:1px solid silver;"><span style="color:gray">[ {$vo.create_time|date='Y-m-d H:i:s',###} ]</span> {$vo.title} </td>
+</tr>
+</volist>
+<tr>		
+</tr>
+</table>
+<div class="result page">{$page}</div>
 </body>
 </html>

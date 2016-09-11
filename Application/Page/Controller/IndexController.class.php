@@ -3,7 +3,7 @@ use Think\Controller;
 class IndexController extends Controller { 
 
     public function index() {
-        $Form   =   M('Form');
+        $Form   =   M('photo');
         $count  = $Form->count();    //计算总数 
         $Page = new \Think\Page($count, 3); 
         //列表值

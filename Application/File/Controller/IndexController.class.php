@@ -6,7 +6,18 @@ class IndexController extends Controller {
         $Photo  =   M('Photo');
         $data   =   $Photo->order('create_time desc')->find();
         $this->assign('data', $data);
-        $this->display();
+        import('@.ORG.String');
+        $code = \String::randString(3, 4, '￥@*&*（');
+        dump($code);
+        $count  = $Photo->count();    //计算总数 
+        $Page = new \Think\Page($count, 3); 
+        //列表值
+        $list   = $Photo->order('id desc')->limit($Page->firstRow. ',' . $Page->listRows)->select(); 
+        $show       = $Page->show();// 分页显示输出     
+        //输出显示        
+        $this->assign('list',$list);// 赋值数据集
+        $this->assign('page',$show);// 赋值分页输出
+        $this->display(); // 输出模板       
     }
 
     public function upload() {
